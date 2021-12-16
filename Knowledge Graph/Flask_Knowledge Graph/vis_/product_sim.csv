@@ -1,0 +1,17 @@
+Pd_code,Brand,Product_Name,Attribute,sim_cus,cus_seg,cus_seg_simscore,title
+001,Brand_A,earphone,waterproof,"('drink_flg', 0.3034)",drink_flg,0.3034,waterproof
+002,Brand_A,earphone,3C,"('drink_flg', 0.5992)",drink_flg,0.5992,3C
+003,Brand_A,earphone,fashion-designed,"('drink_flg', 0.276)",drink_flg,0.276,fashion-designed
+004,Brand_A,mouse,3C,"('drink_flg', 0.599)",drink_flg,0.599,3C
+005,Brand_A,mouse,FPS,"('starbucks_flg', 0.1488)",starbucks_flg,0.1488,FPS
+006,Brand_B,bikini,one-piece,"('starbucks_flg', 0.1177)",starbucks_flg,0.1177,one-piece
+007,Brand_B,bikini,fashion-designed,"('house_flg', 0.162)",house_flg,0.162,fashion-designed
+008,Brand_B,swimsuit,one-piece,"('starbucks_flg', 0.0229)",starbucks_flg,0.0229,one-piece
+001,Brand_A,earphone,waterproof,"('starbucks_flg', 0.268)",starbucks_flg,0.268,waterproof
+002,Brand_A,earphone,3C,"('starbucks_flg', 0.5831)",starbucks_flg,0.5831,3C
+003,Brand_A,earphone,fashion-designed,"('starbucks_flg', 0.2748)",starbucks_flg,0.2748,fashion-designed
+004,Brand_A,mouse,3C,"('starbucks_flg', 0.5831)",starbucks_flg,0.5831,3C
+005,Brand_A,mouse,FPS,"('drink_flg', 0.1261)",drink_flg,0.1261,FPS
+006,Brand_B,bikini,one-piece,"('house_flg', 0.1127)",house_flg,0.1127,one-piece
+007,Brand_B,bikini,fashion-designed,"('starbucks_flg', 0.1307)",starbucks_flg,0.1307,fashion-designed
+008,Brand_B,swimsuit,one-piece,"('drink_flg', 0.0101)",drink_flg,0.0101,one-piece

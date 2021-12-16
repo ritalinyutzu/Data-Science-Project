@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+  <center>
+	<h1>KG based - Grpah Vizulizaiton</h1>
+  </center>
+<style type="text/css">
+        #mynetwork {
+            width: 50%;
+            height: 600px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+</style>
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<form id="kg" action="/" method="post">
+  <label>選擇範圍
+    <select id="nodeFilterSelect">
+      <option value="default">All Characters</option>
+      <option name="3c" value="3c">3C產品</option>
+      <option name="earphone" value="earphone">耳機</option>
+    </select>
+  </label>
+  <div class="block">
+    <input id="mainSubmit" type="submit" value="Submit"/>
+  </div>
+  <div id = "mynetwork"></div>
+  <div id = "config"></div>
+</form>
+	<!-- partial -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <!-- origin: <script  src="../static/script.js"></script>-->
+  <script src="{{ url_for('static',filename ='script.js') }}"></script>
+</body>
+</html>
