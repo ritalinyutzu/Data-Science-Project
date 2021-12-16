@@ -7,6 +7,12 @@ from pyvis.network import Network
 import pandas as pd
 import os
 
+import matplotlib
+matplotlib.rcParams['font.sans-serif']=['Taipei Sans TC Beta']
+#from matplotlib.font_manager import _rebuild
+#_rebuild()
+
+
 #filter df & output html
 def filter_func(data,parms):
     if parms==None: return data
