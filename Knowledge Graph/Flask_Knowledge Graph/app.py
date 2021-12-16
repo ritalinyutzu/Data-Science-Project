@@ -20,9 +20,9 @@ def filter_func(data,parms):
 def draw_Graph_func(data):
     G = nx.from_pandas_edgelist(data,
         'Product_Name','cus_seg',edge_attr = 'title',create_using = nx.DiGraph())
-    nt = Network('600px','50%',directed=True,heading = 'Knowledge Graph')
+    nt = Network('600px','50%',directed=True,heading = '知識圖譜')
     nt.from_nx(G)
-    nt.show_buttons(filter_ = ['physics'])
+    #nt.show_buttons(filter_ = ['physics'])
     nt.show(os.getcwd()+'/templates/Knowledge Graph.html')
 
 pd_sim = pd.read_csv(os.getcwd()+"/vis_/product_sim.csv")
