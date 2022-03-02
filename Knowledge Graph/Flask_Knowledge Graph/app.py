@@ -8,6 +8,9 @@ import pandas as pd
 import os
 
 import matplotlib
+#Library not loaded: @rpath/libwebp.7.dylib:
+#--solution:https://github.com/conda-forge/opencv-feedstock/issues/219
+
 matplotlib.rcParams['font.sans-serif']=['Taipei Sans TC Beta']
 #from matplotlib.font_manager import _rebuild
 #_rebuild()

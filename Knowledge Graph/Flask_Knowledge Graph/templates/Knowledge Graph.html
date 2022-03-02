@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
 <center>
-<h1>Knowledge Graph</h1>
+<h1>知識圖譜</h1>
 </center>
 
 <!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
@@ -23,12 +23,6 @@
         
 
         
-        #config {
-            float: left;
-            width: 400px;
-            height: 600px;
-        }
-        
 
         
 </style>
@@ -46,8 +40,6 @@
         </select> 
     <div id = "mynetwork"></div>
 
-
-<div id = "config"></div>
 
 <script type="text/javascript">
 
@@ -74,10 +66,7 @@
 
         var options = {
     "configure": {
-        "enabled": true,
-        "filter": [
-            "physics"
-        ]
+        "enabled": false
     },
     "edges": {
         "color": {
@@ -107,10 +96,6 @@
         
         
 
-        
-        // if this network requires displaying the configure window,
-        // put it in its div
-        options.configure["container"] = document.getElementById("config");
         
 
         network = new vis.Network(container, data, options);
