@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import pickle
 import pandas as pd
 import numpy as np
@@ -36,7 +36,7 @@ app = Flask(__name__)
 #根目錄
 @app.route("/",methods=['GET','POST'])
 def init():
-    return 'Hello World!'
+    return render_template('index.html')
 
 #Predict
 @app.route("/pred",methods=['GET','POST'])
