@@ -4,7 +4,7 @@ FROM python:3.8-buster
 #以你在容器最外層思考，你要放什麼東西
 WORKDIR /root
 ADD data/deployment/res_dict_w2v.pickle data/deployment/
-ADD deployment/api.py deployment/
+ADD deployment/api_static.py deployment/
 
 #東西尻進去後，開始裝套件
 #opencc install:https://www.796t.com/article.php?id=10422
