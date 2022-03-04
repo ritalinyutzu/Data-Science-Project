@@ -1,0 +1,33 @@
+FROM python:3.8-buster
+#建置初始容器:https://hub.docker.com/_/python
+
+#以你在容器最外層思考，你要放什麼東西
+WORKDIR /root
+ADD deployment/api_dynamic.py deployment/
+ADD docs/eyemining_words.txt docs/
+ADD docs/stop_words.txt docs/
+ADD model/ner_driver.pickle model/
+ADD model/pos_driver.pickle model/
+ADD model/w2v_CNA_ASBC_300d.vec model/
+ADD model/ws_driver.pickle model/
+ADD src/tagging.py src/
+ADD src/w2v_search.py src/
+
+#東西尻進去後，開始裝套件
+#opencc install:https://www.796t.com/article.php?id=10422
+RUN pip install opencc-python-reimplemented
+RUN pip install ckip-transformers
+RUN pip install flask==1.1.2
+RUN pip install gensim==3.7.0
+RUN pip install itertools
+RUN pip install collections
+RUN apt update && apt install vim -y
+
+EXPOSE 6666
+
+#--給一個變數叫xterm--#
+#ENV TERM xterm 
+ENV TZ 'Asia/Taipei'
+
+#--entry command line--#
+ENTRYPOINT ["python", "/root/deployment/api_dynamic.py"] 
