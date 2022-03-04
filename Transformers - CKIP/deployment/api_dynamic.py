@@ -41,9 +41,10 @@ def init():
 #Predict
 @app.route("/pred",methods=['GET','POST'])
 def transformer_predict():
-    brand = request.values.get('brand')
-    element = request.values.get('element')
-
+    req_dict = request.get_json()
+    brand = req_dict.get(brand,None)
+    element = req_dict.get(element,None)
+    
     #eval一個input list
     tmp_obj = tagging(brand,eval(element))
     tmp_obj = w2v_filtered_func(tmp_obj,gensim_model,del_set,4,0.1)
