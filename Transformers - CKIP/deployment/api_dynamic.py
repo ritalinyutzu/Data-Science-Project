@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request, render_template
+from itsdangerous import json
 import pickle
 import pandas as pd
 import numpy as np
@@ -32,6 +33,7 @@ del_set = set([x[:-1] for x in del_set])
 
 #---FLASK---#
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 #根目錄
 @app.route("/",methods=['GET','POST'])
@@ -42,8 +44,8 @@ def init():
 @app.route("/pred",methods=['GET','POST'])
 def transformer_predict():
     req_dict = request.get_json()
-    brand = req_dict.get(brand,None)
-    element = req_dict.get(element,None)
+    brand = req_dict.get("brand",None)
+    element = req_dict.get("element",None)
     
     #eval一個input list
     tmp_obj = tagging(brand,eval(element))
@@ -52,4 +54,4 @@ def transformer_predict():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=5000)
+    app.run(port=8000,debug=True)
