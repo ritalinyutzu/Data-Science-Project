@@ -7,12 +7,15 @@ let div_r = document.querySelector("div.r");
 
 input.addEventListener("change", (e) => {
     div_preview.innerText = input.files[0].name;
+    div_preview.classList.remove("preview");
+    div_preview.classList.add("add3");
 });
 
 button.addEventListener("click", (e) => {
     e.preventDefault();
     div_b.innerText = "DATA ANALYSING......";
-    div_preview.innerText = "No files currently selected for";
+    div_r.classList.remove("add");
+    div_r.innerText = "";
     let file = input.files[0];
     let reader = new FileReader();
     reader.readAsText(file);
