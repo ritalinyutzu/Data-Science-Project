@@ -1,4 +1,46 @@
 let input = document.querySelector("input.file_input");
+let button = document.querySelector("button");
+let div_preview = document.querySelector("div.preview");
+let div_result = document.querySelector("div.result");
+let div_b = document.querySelector("div.b");
+let div_r = document.querySelector("div.r");
+
+input.addEventListener("change", (e) => {
+    div_preview.innerText = input.files[0].name;
+});
+
+button.addEventListener("click", (e) => {
+    e.preventDefault();
+    div_b.innerText = "DATA ANALYSING......";
+    div_preview.innerText = "No files currently selected for";
+    let file = input.files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = (e) => {
+        let file_text = reader.result;
+        let file_array = csv_to_array(file_text);
+        let file_json = {
+            brand: file_array[1][0],
+            element: file_array[1][1],
+        };
+        async function send_to_api() {
+            let response = await fetch("/pred", {
+                method: "POST",
+                body: JSON.stringify(file_json),
+                headers: {
+                    "content-type": "application/json",
+                },
+            });
+            let response_body_json = await response.json();
+            div_result.classList.add("add2");
+            div_b.innerText = file_array[1][0];
+            div_r.classList.add("add");
+            div_r.innerText =
+                response_body_json[Object.keys(response_body_json)[0]];
+        }
+        send_to_api();
+    };
+});
 
 function csv_to_array(strData, strDelimiter) {
     // Check to see if the delimiter is defined. If not,
@@ -69,31 +111,3 @@ function csv_to_array(strData, strDelimiter) {
     // Return the parsed data.
     return arrData;
 }
-
-input.addEventListener("change", (e) => {
-    let file = input.files[0];
-    let reader = new FileReader();
-    reader.onload = (e) => {
-        let file_text = reader.result;
-        let file_array = csv_to_array(file_text);
-        console.log(file_array[1]);
-        let file_json = {
-            brand: file_array[1][0],
-            element: file_array[1][1],
-        };
-        async function send_to_api() {
-            let response = await fetch("/pred", {
-                method: "POST",
-                body: JSON.stringify(file_json),
-                headers: {
-                    "content-type": "application/json",
-                },
-            });
-            let response_body_json = await response.json();
-            let div_result = document.querySelector("div.result");
-            div_result.innerText = response_body_json;
-        }
-        send_to_api();
-    };
-    reader.readAsText(file);
-});
