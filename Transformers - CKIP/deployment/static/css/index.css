@@ -45,7 +45,6 @@ form {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 70vw;
-  height: 25vh;
   margin-top: 2rem;
 }
 
@@ -97,6 +96,7 @@ form div.con1 div.preview {
   width: 80%;
   overflow: auto;
   font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 form div.con1 button {
@@ -143,5 +143,14 @@ div.result div.r {
 
 .add2 {
   border: 1px solid black;
+}
+
+.add3 {
+  background-color: rgba(238, 238, 238, 0.8);
+  border: 1px solid black;
+  width: 80%;
+  overflow: auto;
+  font-size: 1.2rem;
+  color: #a11818;
 }
 /*# sourceMappingURL=index.css.map */
