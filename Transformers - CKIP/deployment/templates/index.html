@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>我愛佘健源</h1>
-    <div>
-        <div>Select a text file:</div>
-        <input type="file" id="file_input" class="file_input">
-    </div>
-    <div class="result"></div>
-</body>
-<script src="/static/index.js?0001"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/css/index.css" />
+    </head>
+    <body>
+        <form>
+            <div class="header">
+                <p>標籤引擎 測試版</p>
+            </div>
+
+            <div class="con1">
+                <label for="file_input">Choose a CSV file to upload</label>
+                <input
+                    type="file"
+                    id="file_input"
+                    class="file_input"
+                    accept=".csv"
+                />
+                <div class="preview">No files currently selected for</div>
+                <button type="button">Start to analyze</button>
+            </div>
+        </form>
+        <div class="result">
+            <div class="b"></div>
+            <div class="r"></div>
+        </div>
+    </body>
+    <script src="/static/javascript/index.js?202203062018"></script>
 </html>

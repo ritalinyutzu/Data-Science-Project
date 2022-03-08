@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-size: 20px;
+}
+
+body {
+  background-image: url("/static/image/snake.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form label:active,
+form button:active {
+  background-color: #0d3f8f;
+  color: white;
+}
+
+form {
+  background-color: rgba(188, 174, 174, 0.6);
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70vw;
+  margin-top: 2rem;
+}
+
+form label:hover,
+form button:hover {
+  background-color: #2d5ba3;
+  color: white;
+}
+
+form div p {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+form div.con1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0.5rem 1rem;
+  height: 60%;
+}
+
+form div.con1 label {
+  background-color: #7f9ccb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px ridge black;
+  font-size: 0.8rem;
+  height: auto;
+  cursor: pointer;
+}
+
+form div.con1 input {
+  display: none;
+}
+
+form div.con1 div.preview {
+  background-color: rgba(238, 238, 238, 0.8);
+  border: 1px solid black;
+  width: 80%;
+  overflow: auto;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+form div.con1 button {
+  background-color: #7f9ccb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px ridge black;
+  font-size: 0.8rem;
+  height: auto;
+  cursor: pointer;
+}
+
+div.result {
+  background-color: rgba(188, 174, 174, 0.6);
+  width: 70vw;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.result div.b {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+div.result div.r {
+  width: 80%;
+  background-color: rgba(238, 238, 238, 0.8);
+}
+
+.add {
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  border: 1px solid black;
+}
+
+.add2 {
+  border: 1px solid black;
+}
+
+.add3 {
+  background-color: rgba(238, 238, 238, 0.8);
+  border: 1px solid black;
+  width: 80%;
+  overflow: auto;
+  font-size: 1.2rem;
+  color: #a11818;
+}
+/*# sourceMappingURL=index.css.map */
